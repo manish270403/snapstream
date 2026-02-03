@@ -13,7 +13,7 @@ const uploadOnCloudinary = async (localFilePath) => {
       return null;
     }
     // upload the file to cloudinary
-    const response = await cloudinary.v2.uploader.upload(localFilePath, {
+    const response = await cloudinary.uploader.upload(localFilePath, {
       resource_type: "auto",
     });
     // file has been uploaded sucessfully
@@ -28,4 +28,4 @@ const uploadOnCloudinary = async (localFilePath) => {
 
 export { uploadOnCloudinary };
 
-cloudinary.v2.uploader.upload("");
+cloudinary.uploader.upload("");
